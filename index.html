@@ -1,0 +1,114 @@
+<title>César Nogueira Silva Portfólio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: coluna única de leitura (máx. 860px), cabeçalho com identidade, uma tabela de status como peça central. */
+:root {
+  --bg: #f3f5f8;
+  --surface: #ffffff;
+  --ink: #102a43;
+  --ink-soft: #486581;
+  --line: #d9e2ec;
+  --accent: #b8860b;
+  --accent-ink: #7a5a00;
+  --ok: #1f7a4d;
+  --ok-bg: #e3f4ea;
+  --plan: #8a5a00;
+  --plan-bg: #fdf1d6;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1a29; --surface: #12263a; --ink: #e6edf5; --ink-soft: #9fb3c8; --line: #243b53;
+    --accent: #e0b44a; --accent-ink: #e0b44a; --ok: #6fd3a0; --ok-bg: #123a2a; --plan: #f0c76a; --plan-bg: #3a2c0e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1a29; --surface: #12263a; --ink: #e6edf5; --ink-soft: #9fb3c8; --line: #243b53;
+  --accent: #e0b44a; --accent-ink: #e0b44a; --ok: #6fd3a0; --ok-bg: #123a2a; --plan: #f0c76a; --plan-bg: #3a2c0e;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.55; padding-inline: 20px; padding-block: 40px 56px; }
+main { max-width: 860px; margin-inline: auto; display: flex; flex-direction: column; gap: 44px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.12; margin: 0; }
+h1 { font-size: clamp(2rem, 5.5vw, 3.1rem); font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
+p { margin: 0; max-width: 65ch; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); }
+header { display: flex; flex-direction: column; gap: 14px; padding-bottom: 32px; border-bottom: 2px solid var(--ink); }
+.lede { font-size: 1.15rem; color: var(--ink-soft); }
+section { display: flex; flex-direction: column; gap: 16px; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.col { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.col h3 { font-size: 1.05rem; }
+.col p { font-size: 0.95rem; color: var(--ink-soft); }
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 0.95rem; }
+th { text-align: left; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); padding: 12px 16px; border-bottom: 1px solid var(--line); }
+td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-weight: 600; width: 30%; }
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 0.72rem; padding: 3px 9px; border-radius: 3px; white-space: nowrap; }
+.tag.ok { background: var(--ok-bg); color: var(--ok); }
+.tag.plan { background: var(--plan-bg); color: var(--plan); }
+.note { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; color: var(--ink-soft); }
+ol.q { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 8px; max-width: 65ch; }
+ol.q li::marker { font-family: var(--font-mono); color: var(--accent-ink); }
+a { color: var(--accent-ink); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+footer { font-size: 0.9rem; color: var(--ink-soft); padding-top: 20px; border-top: 1px solid var(--line); }
+</style>
+
+<main>
+  <header>
+    <span class="eyebrow">Portfólio · Controladoria e automação jurídica</span>
+    <h1>César Nogueira Silva</h1>
+    <p class="lede">Desenvolvo software em engenharia biomédica e, em paralelo, construo o JurisFlow: um sistema de controladoria para escritórios de advocacia com grande volume de processos.</p>
+  </header>
+
+  <section>
+    <h2>JurisFlow</h2>
+    <p>Sistema web para escritórios, dividido em módulos que o escritório ativa conforme a necessidade. Cada escritório enxerga só os próprios dados e cada usuário tem um perfil com permissões definidas. Está em validação com um advogado.</p>
+    <div class="cols">
+      <div class="col"><h3>Clientes e processos</h3><p>Cadastro de clientes PF e PJ, processos vinculados a cliente e advogado responsável, histórico de andamentos.</p></div>
+      <div class="col"><h3>Monitoramento de tribunais</h3><p>Consulta automática à base DataJud do CNJ em intervalos configuráveis e alerta por e-mail a cada novo andamento.</p></div>
+      <div class="col"><h3>Financeiro</h3><p>Receitas e despesas, honorários recorrentes, DRE mensal, exportação para Excel e PDF, importação de extrato em CSV.</p></div>
+      <div class="col"><h3>Perfis de acesso</h3><p>Super admin, administrador, advogado, estagiário, financeiro e secretaria, cada um com o que pode ver e alterar.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Boletos e CNDs em grande volume</h2>
+    <p>O que já existe no sistema e o que ainda precisa ser desenhado junto com o escritório.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Frente</th><th>Situação</th><th>Como eu abordaria</th></tr></thead>
+        <tbody>
+          <tr><td>Controle de processos em volume</td><td><span class="tag ok">Funcionando</span></td><td>Varredura automática em lote, com falha isolada por processo, para que um erro não pare os demais.</td></tr>
+          <tr><td>Cobrança recorrente e contas a receber</td><td><span class="tag ok">Funcionando</span></td><td>Geração diária de cobranças a partir de regras por cliente, com baixa e acompanhamento de atraso.</td></tr>
+          <tr><td>Emissão de boletos em lote</td><td><span class="tag plan">A desenhar</span></td><td>Partir da cobrança recorrente existente e ligar a um provedor de cobrança. O sistema já tem integração com o Asaas, hoje usada nas assinaturas.</td></tr>
+          <tr><td>Emissão e controle de CNDs</td><td><span class="tag plan">A levantar</span></td><td>Cada órgão emissor tem canal e regra próprios. Primeiro mapear quais certidões, de quais órgãos e com que validade, depois decidir o que dá para automatizar e o que fica como fila de trabalho.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Boletos e CNDs em lote não estão prontos. Prefiro mapear o seu processo antes de prometer prazo ou escopo.</p>
+  </section>
+
+  <section>
+    <h2>Para começar a conversa</h2>
+    <p>Com estas respostas consigo dizer se o JurisFlow atende ou se faz mais sentido indicar outra solução.</p>
+    <ol class="q">
+      <li>Quantos boletos e quantas CNDs são emitidos por mês, e quantas pessoas fazem isso hoje?</li>
+      <li>De quais órgãos saem as certidões e quais sistemas ou portais são usados?</li>
+      <li>Onde ficam os dados de clientes e cobranças hoje (planilha, ERP, sistema do escritório)?</li>
+      <li>Onde o processo trava mais: coleta de dados, emissão, conferência ou envio ao cliente?</li>
+    </ol>
+  </section>
+
+  <footer>
+    Contato pelo <a href="https://www.linkedin.com/in/ACoAACEFTF0BddjNsF0iiB9pFHolMfS0Y2egy6U" target="_blank" rel="noopener">LinkedIn</a>.
+  </footer>
+</main>
